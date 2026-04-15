@@ -1,6 +1,8 @@
 import { Container, Typography, Box, Paper, Button } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import PerfilResumen from "../components/PerfilResumen";
+
 
 function Home() {
   return (
@@ -21,7 +23,7 @@ function Home() {
         >
           ¡Bienvenido a mi Portafolio!
         </Typography>
-        
+              <PerfilResumen />
         <Paper 
           elevation={6} 
           sx={{ 

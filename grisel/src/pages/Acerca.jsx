@@ -1,7 +1,9 @@
 import { Container, Typography, Box, Paper, Avatar, Grid, Chip, Card, CardContent } from '@mui/material';
 import fotografia from '../assets/fotografia.jpeg';
-
+import { useAlumnoContext } from "../context/AlumnoContext";
 function Acerca() {
+  const { alumno } = useAlumnoContext();
+  const { nombre, carrera, grupo, semestre } = alumno || {};
   const habilidades = ['HTML', 'CSS', 'JavaScript', 'React', 'Material-UI', 'Node.js'];
 
   return (
@@ -51,14 +53,14 @@ function Acerca() {
                 gutterBottom 
                 sx={{ color: '#6b46c1', fontWeight: 700 }}
               >
-                Grisel Silva
+                ¨{nombre}
               </Typography>
 
               <Typography 
                 variant="h6" 
                 sx={{ color: '#8b5cf6', fontWeight: 600, mb: 3 }}
               >
-                Ingeniería en Sistemas
+                {carrera}
               </Typography>
 
               <Typography 
@@ -77,6 +79,15 @@ function Acerca() {
                 Mi objetivo es convertirme en una desarrolladora full-stack competente y seguir mejorando mis habilidades.
                 Creo que la tecnología es una herramienta poderosa para cambiar el mundo.
               </Typography>
+              
+                 <Box sx={{ mb: 3 }}>
+                <Typography variant="body1" sx={{ color: '#555', fontWeight: 600 }}>
+                  <strong>Grupo:</strong> {grupo}
+                </Typography>
+                <Typography variant="body1" sx={{ color: '#555', fontWeight: 600 }}>
+                  <strong>Semestre:</strong> {semestre}
+                </Typography>
+              </Box>
 
               <Box sx={{ mt: 4 }}>
                 <Typography 
