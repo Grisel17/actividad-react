@@ -7,6 +7,9 @@ import Contacto from "./pages/Contacto";
 import Tablas from "./pages/Tablas";
 import Navbar from "./components/Navbar";
 
+// Importamos el nuevo componente Asuarios al Route//
+import Usuarios from "./pages/Usuarios";
+
 const theme = createTheme({
   palette: {
     primary: {
@@ -49,6 +52,7 @@ function App() {
           <Route path="/acerca" element={<Acerca />} />
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/tablas" element={<Tablas />} />
+          <Route path="/usuarios" element={<Usuarios />} />
         </Routes>
       </Box>
     </ThemeProvider>
