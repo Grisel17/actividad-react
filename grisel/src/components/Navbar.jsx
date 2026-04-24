@@ -84,6 +84,22 @@ function Navbar() {
         >
           Usuarios
         </NavLink>
+
+             <NavLink
+          to="/mapa"
+          style={({ isActive }) => ({
+            color: isActive ? '#fff' : 'rgba(255,255,255,0.7)',
+            textDecoration: 'none',
+            fontWeight: isActive ? 'bold' : 'normal',
+            fontSize: '1.1rem',
+            padding: '10px 20px',
+            borderRadius: '8px',
+            transition: 'all 0.3s ease',
+            borderBottom: isActive ? '3px solid #fff' : 'none',
+          })}
+        >
+          Mapa
+        </NavLink>
       </Toolbar>
     </AppBar>
   );

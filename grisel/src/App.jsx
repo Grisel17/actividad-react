@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 
 // Importamos el nuevo componente Asuarios al Route//
 import Usuarios from "./pages/Usuarios";
+import Mapa from "./pages/Mapa";
 
 const theme = createTheme({
   palette: {
@@ -53,6 +54,7 @@ function App() {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/tablas" element={<Tablas />} />
           <Route path="/usuarios" element={<Usuarios />} />
+          <Route path="/mapa" element={<Mapa />} />
         </Routes>
       </Box>
     </ThemeProvider>
